@@ -9,7 +9,26 @@ Make sure to comment your code as you walk through your though process.
 //Show me how to calculate the average price of all items.
 //  The average price is $23.63
 
+// to be reused for any Price display if necessary
+function roundToCents(rawPrice){
+  return Math.round(rawPrice * 100) / 100
+}
 
+// to get the entire element and set it = to javascript varible
+var jAnswer1 = document.getElementById("answer1");
+
+//gets each object in the array drills down to the value stored in the price key
+//adds each of the values together and divides by items.length to get average
+function calcAverPrice(){
+  var total = 0
+  for (var count = 0; count < items.length; count++) {
+    total += items[count].price
+    }
+  return total / items.length
+}
+
+// displays rounded average onscreen with a nice dollar sign
+jAnswer1.innerHTML = "$" + roundToCents(calcAverPrice());
 
 
 /*Show me how to get an array of items that cost between $14.00 and $18.00 USD
@@ -19,11 +38,25 @@ Make sure to comment your code as you walk through your though process.
 
   Hand Painted Colorful Feather Glass*/
 
+var items14To18bucks = []; // initalize array to be filled with 14 to 18 dollar items
 
+function createArray14To18(){
+  for (var count = 0; count < items.length; count++) {
+      if(items[count].price < 18 && items[count].price > 14){ // checks each items price
+        items14To18bucks.push(items[count].title);            // adds it to array if it meets criteria
+    //    console.log(items[0].price)
+      }
+    }
+  return items14To18bucks  // returns the array of items that meet the requirements
+}
 
+//console.log(createArray14To18())
 
+// to get the entire element and set it = to javascript varible
+var jTitle = document.getElementById("answer2");
 
-
+//jtitle = createArray14To18[0];
+jTitle.innerHTML = createArray14To18();
 
 /*Which item has a "GBP" currency code? Display it's name and price.
   1970s Schlitz Malt Liquor Glass Beer Pitcher costs £18 */
