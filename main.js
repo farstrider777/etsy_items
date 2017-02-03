@@ -75,7 +75,7 @@ for(var count = 0; count < createArray14To18().length; count++){
 
 var jAnswer3 = document.getElementById("answer3")
 
-jAnswer3.innerHTML = checkGbp().title + " costs £" + checkGbp().price;
+jAnswer3.innerHTML = checkGbp().title + " costs &pound" + checkGbp().price;
 
 
 /*

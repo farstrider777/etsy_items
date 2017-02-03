@@ -28,6 +28,13 @@ font-family: 'Roboto Slab', serif;
 color: #484848
 }
 
+footer{
+background-color: #4B484F;
+padding-top: 70px;
+padding-bottom: 25px;
+color: #A1A0A5;
+font-size: 13px;
+}
 
 .relative{
   position: relative;
