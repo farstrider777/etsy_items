@@ -197,3 +197,16 @@ for (var count = 0; count < checkNumMat().length; count++){
 How many items were made by their sellers?
   18 were made by their sellers
 */
+jAnswer6 = document.getElementById("answer6");
+
+function itemsMadeByS(){
+  var icount = 0;
+  for(var count = 0; count < items.length; count++){
+    if(items[count].who_made === "i_did"){
+      icount++;
+    }
+  }
+  jAnswer6.innerHTML = icount + " were made by their sellers"
+}
+
+itemsMadeByS();
