@@ -16,6 +16,10 @@ div {
   width: 1100px;
 }
 
+div div{
+  text-align: left;
+}
+
 h3 {
 font-weight: 100;
 padding-top: 30px;
@@ -70,7 +74,7 @@ color: #484848
 
 .answer6-borderl{
   position: absolute;
-  top: 1200px;
+  top: 1500px;
   left: 35px;
   border: 1px solid #E9E9E9;
   width: 435px;

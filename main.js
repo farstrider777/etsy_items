@@ -154,21 +154,42 @@ Which items are made of eight or more materials? Display the name, number of ite
   personalized harry potter glass
 */
 
+//checks all items to see if the number of materials is greater than or equal to 8
+// and then pushes each of those items to an array and returns that array
+// also puts values a array that holds index values of which items have more than 8 materials
+var itemIndexValues = []
+
 function checkNumMat(){
   items8Mat = [];
   for (var count = 0; count < items.length; count++) {
     if(items[count].materials.length >= 8){
       items8Mat.push(items[count]);
+      itemIndexValues.push(count);
     }
   }
   return items8Mat;
 }
 
+// stores element to javascript variable
 var jAnswer5 = document.getElementById("answer5");
 
-jAnswer5.innerHTML = "<P>" + checkNumMat()[0].title  + " has " + checkNumMat()[0].materials.length + " materials:" + "</P>";
-//finish to loop both elements
-// decide if want to use nested for loop or other function
+
+// takes an item index and uses that to print the materials that item is made out of to the HTML
+function printMat(whichItem){
+  for (var count = 0; count < items[whichItem].materials.length; count++){
+    jAnswer5.innerHTML += "<P>" + items[whichItem].materials[count] + "</P>"
+  }
+//console.log(whichItem);
+}
+
+
+// uses checkNumMat to find the items that have 8 or more materials then prints the
+// first one to the html then runs
+for (var count = 0; count < checkNumMat().length; count++){
+  jAnswer5.innerHTML += "<P>" + checkNumMat()[count].title  + " has " + checkNumMat()[count].materials.length + " materials:" + "</P>";
+  printMat(itemIndexValues[count]);
+}
+
 
 
 
