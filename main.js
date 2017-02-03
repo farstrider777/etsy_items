@@ -91,8 +91,8 @@ Display a list of all items who are made of wood.
   Engraved Pocket Knife, Personalized Groomsmen Gift, Ring Bearer Gift, Graduation Gift, 4 Knives is made of wood.
 */
 
-var arr = [1, 2, 3, 4]
 
+//function to check each array of materials to see if it has wood in it
 function searchArrayForWood(arrayToCheck){
   for(var count = 0; count < arrayToCheck.length; count++){
     if(arrayToCheck[count] === "wood"){return true;}
@@ -100,27 +100,24 @@ function searchArrayForWood(arrayToCheck){
   return false
 }
 
-//console.log(searchArrayForWood(arr));
 
-
-
+//function to send the array of materials from each object to the searchArrayForWood function
+// and then return an array of the objects that do have wood.
 function checkWood(){
   var objectsWithWood = [];
   for (var count = 0; count < items.length; count++) {
     if(searchArrayForWood(items[count].materials)){
       objectsWithWood.push(items[count]);
-      //console.log("hey");
     }
   }
   return objectsWithWood;
 }
 
-var jAnswer4 = document.getElementById("answer4")
+var jAnswer4 = document.getElementById("answer4") //sets jAnswer 4 to the correct element
 
-
+// prints the wooden items to the screen in individual paragraphs
 for(var count = 0; count < checkWood().length; count++){
   jAnswer4.innerHTML += "<P>" + checkWood()[count].title + " is made of wood." + "</P>";
-//console.log(checkWood()[count].title + "is made of wood.")
 }
 
 
