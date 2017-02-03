@@ -154,6 +154,22 @@ Which items are made of eight or more materials? Display the name, number of ite
   personalized harry potter glass
 */
 
+function checkNumMat(){
+  items8Mat = [];
+  for (var count = 0; count < items.length; count++) {
+    if(items[count].materials.length >= 8){
+      items8Mat.push(items[count]);
+    }
+  }
+  return items8Mat;
+}
+
+var jAnswer5 = document.getElementById("answer5");
+
+jAnswer5.innerHTML = "<P>" + checkNumMat()[0].title  + " has " + checkNumMat()[0].materials.length + " materials:" + "</P>";
+//finish to loop both elements
+// decide if want to use nested for loop or other function
+
 
 
 
