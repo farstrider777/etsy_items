@@ -23,3 +23,55 @@ font-size: 33px;
 font-family: 'Roboto Slab', serif;
 color: #484848
 }
+
+.relative{
+  position: relative;
+}
+
+.answer1-borderl{
+  position: absolute;
+  top: 219px;
+  left: 35px;
+  border: 1px solid #E9E9E9;
+  width: 435px;
+}
+
+.answer2-borderl{
+  position: absolute;
+  top: 370px;
+  left: 35px;
+  border: 1px solid #E9E9E9;
+  width: 435px;
+}
+
+.answer3-borderl{
+  position: absolute;
+  top: 590px;
+  left: 35px;
+  border: 1px solid #E9E9E9;
+  width: 435px;
+}
+
+.answer4-borderl{
+  position: absolute;
+  top: 740px;
+  left: 35px;
+  border: 1px solid #E9E9E9;
+  width: 435px;
+}
+
+.answer5-borderl{
+  position: absolute;
+  top: 1045px;
+  left: 35px;
+  border: 1px solid #E9E9E9;
+  width: 435px;
+}
+
+.answer6-borderl{
+  position: absolute;
+  top: 1200px;
+  left: 35px;
+  border: 1px solid #E9E9E9;
+  width: 435px;
+}
