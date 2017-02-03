@@ -28,7 +28,7 @@ function calcAverPrice(){
 }
 
 // displays rounded average onscreen with a nice dollar sign
-jAnswer1.innerHTML = "$" + roundToCents(calcAverPrice());
+jAnswer1.innerHTML = "The average price is $" + roundToCents(calcAverPrice());
 
 
 /*Show me how to get an array of items that cost between $14.00 and $18.00 USD
@@ -65,6 +65,17 @@ for(var count = 0; count < createArray14To18().length; count++){
   1970s Schlitz Malt Liquor Glass Beer Pitcher costs £18 */
 
 
+  function checkGbp(){
+    for (var count = 0; count < items.length; count++) {
+      if(items[count].currency_code === "GBP"){
+        return items[count]
+      }
+    }
+  }
+
+var jAnswer3 = document.getElementById("answer3")
+
+jAnswer3.innerHTML = checkGbp().title + " costs £" + checkGbp().price;
 
 
 /*
@@ -80,8 +91,37 @@ Display a list of all items who are made of wood.
   Engraved Pocket Knife, Personalized Groomsmen Gift, Ring Bearer Gift, Graduation Gift, 4 Knives is made of wood.
 */
 
+var arr = [1, 2, 3, 4]
+
+function searchArrayForWood(arrayToCheck){
+  for(var count = 0; count < arrayToCheck.length; count++){
+    if(arrayToCheck[count] === "wood"){return true;}
+  }
+  return false
+}
+
+//console.log(searchArrayForWood(arr));
 
 
+
+function checkWood(){
+  var objectsWithWood = [];
+  for (var count = 0; count < items.length; count++) {
+    if(searchArrayForWood(items[count].materials)){
+      objectsWithWood.push(items[count]);
+      //console.log("hey");
+    }
+  }
+  return objectsWithWood;
+}
+
+var jAnswer4 = document.getElementById("answer4")
+
+
+for(var count = 0; count < checkWood().length; count++){
+  jAnswer4.innerHTML += "<P>" + checkWood()[count].title + " is made of wood." + "</P>";
+//console.log(checkWood()[count].title + "is made of wood.")
+}
 
 
 
