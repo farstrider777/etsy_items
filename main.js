@@ -156,7 +156,7 @@ Which items are made of eight or more materials? Display the name, number of ite
 
 //checks all items to see if the number of materials is greater than or equal to 8
 // and then pushes each of those items to an array and returns that array
-// also puts values a array that holds index values of which items have more than 8 materials
+// also puts values in an array that holds index values of which items have more than 8 materials
 var itemIndexValues = []
 
 function checkNumMat(){
@@ -179,12 +179,11 @@ function printMat(whichItem){
   for (var count = 0; count < items[whichItem].materials.length; count++){
     jAnswer5.innerHTML += "<P>" + items[whichItem].materials[count] + "</P>"
   }
-//console.log(whichItem);
 }
 
 
 // uses checkNumMat to find the items that have 8 or more materials then prints the
-// first one to the html then runs
+// first one to the html then runs printMat to print the materirals those items are made from
 for (var count = 0; count < checkNumMat().length; count++){
   jAnswer5.innerHTML += "<P>" + checkNumMat()[count].title  + " has " + checkNumMat()[count].materials.length + " materials:" + "</P>";
   printMat(itemIndexValues[count]);

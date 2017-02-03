@@ -28,11 +28,12 @@ font-family: 'Roboto Slab', serif;
 color: #484848
 }
 
+
 .relative{
   position: relative;
 }
 
-.answer1-borderl{
+.answer1-border-l{
   position: absolute;
   top: 219px;
   left: 35px;
@@ -40,7 +41,7 @@ color: #484848
   width: 435px;
 }
 
-.answer2-borderl{
+.answer2-border-l{
   position: absolute;
   top: 370px;
   left: 35px;
@@ -48,7 +49,7 @@ color: #484848
   width: 435px;
 }
 
-.answer3-borderl{
+.answer3-border-l{
   position: absolute;
   top: 590px;
   left: 35px;
@@ -56,7 +57,7 @@ color: #484848
   width: 435px;
 }
 
-.answer4-borderl{
+.answer4-border-l{
   position: absolute;
   top: 740px;
   left: 35px;
@@ -64,7 +65,7 @@ color: #484848
   width: 435px;
 }
 
-.answer5-borderl{
+.answer5-border-l{
   position: absolute;
   top: 1045px;
   left: 35px;
@@ -72,10 +73,58 @@ color: #484848
   width: 435px;
 }
 
-.answer6-borderl{
+.answer6-border-l{
   position: absolute;
-  top: 1500px;
+  top: 1978px;
   left: 35px;
+  border: 1px solid #E9E9E9;
+  width: 435px;
+}
+
+.answer1-border-r{
+  position: absolute;
+  top: 219px;
+  left: 630px;
+  border: 1px solid #E9E9E9;
+  width: 435px;
+}
+
+.answer2-border-r{
+  position: absolute;
+  top: 370px;
+  left: 630px;
+  border: 1px solid #E9E9E9;
+  width: 435px;
+}
+
+.answer3-border-r{
+  position: absolute;
+  top: 590px;
+  left: 630px;
+  border: 1px solid #E9E9E9;
+  width: 435px;
+}
+
+.answer4-border-r{
+  position: absolute;
+  top: 740px;
+  left: 630px;
+  border: 1px solid #E9E9E9;
+  width: 435px;
+}
+
+.answer5-border-r{
+  position: absolute;
+  top: 1045px;
+  left: 630px;
+  border: 1px solid #E9E9E9;
+  width: 435px;
+}
+
+.answer6-border-r{
+  position: absolute;
+  top: 1978px;
+  left: 630px;
   border: 1px solid #E9E9E9;
   width: 435px;
 }
