@@ -15,3 +15,11 @@ div {
   background-color: #EEEEEE;
   width: 1100px;
 }
+
+h3 {
+font-weight: 100;
+padding-top: 30px;
+font-size: 33px;
+font-family: 'Roboto Slab', serif;
+color: #484848
+}
